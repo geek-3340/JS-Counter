@@ -30,7 +30,12 @@ body{
   border-radius: 5px;
 }
 
-@media screen(max-width)
+@media screen and (max-width:768px) {
+  .button{
+    font-size: 12px;
+    width: 120px;
+  }
+}
 
 .button:hover{
   background: #333;
