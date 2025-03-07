@@ -30,7 +30,7 @@
     }
   }
 
-function resetMagAngle {
+function resetMagAngle() {
   currentMag = 1;
   currentAngle = 0;
   updateTransform();
