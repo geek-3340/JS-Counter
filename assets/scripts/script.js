@@ -1,14 +1,17 @@
 (() => {
+  // DOM
   const $counter = document.getElementById('js-counter');
   const $logo = document.getElementById('js-logo');
   
+  // logoの拡大率、角度　初期化
   let currentMag = 1;
   let currentAngle = 0;
-  const updateTransform=()=> {
+  function updateTransform() {
      $logo.style.transform = `scale(${currentMag}) rotate(${currentAngle}deg)`;
   }
-  
-  const increaseMag=()=> {
+
+  // logoを拡大する関数
+  function increaseMag() {
     if (currentMag <= 1.4) {
       currentMag = currentMag + 0.2;
       updateTransform();
@@ -16,8 +19,9 @@
       alert('No more!');
     }
   }
-  
-  const decreaseMag=()=> {
+
+  // logoを縮小する関数
+  function decreaseMag() {
     if (currentMag >= 0.6) {
       currentMag = currentMag - 0.2;
       updateTransform();
@@ -26,6 +30,7 @@
     }
   }
 
+  // click時の実行関数
   const clickHandler = (e) => {
     const $targetButton = e.currentTarget;
     let currentCount = parseInt($counter.textContent);
@@ -43,6 +48,7 @@
     }
   }
 
+  // clickに実行
   for (let index = 0; index < document.getElementsByClassName('js-button').length; index++) {
     document.getElementsByClassName('js-button')[index].
       addEventListener('click', (e) => clickHandler(e));
