@@ -60,4 +60,7 @@ function resetMagAngle {
       addEventListener('click', (e) => clickHandler(e));
   };
   
+  document.getElementById('js-reset-button').
+    addEventListener('click', resetMagAngle);
+  
 })();
