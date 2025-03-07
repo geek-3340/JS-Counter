@@ -38,6 +38,11 @@ body{
   border-radius: 5px;
 }
 
+.button-reset{
+  backgrond: #555;
+  font-weight: bold;
+}
+
 @media screen and (max-width:768px) {
   .button{
     font-size: 12px;
