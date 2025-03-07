@@ -5,7 +5,7 @@
   let currentMag = 1;
   let currentAngle = 0;
   const updateTransform=()=> {
-     $logo.style.transform = `scale(${currentMag}) rotate(${angle}deg)`;
+     $logo.style.transform = `scale(${currentMag}) rotate(${currentAngle}deg)`;
   }
   
   const increaseMag=()=> {
