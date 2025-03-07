@@ -30,6 +30,12 @@
     }
   }
 
+function resetMagAngle {
+  currentMag = 1;
+  currentAngle = 0;
+  updateTransform();
+}
+
   // click時の実行関数
   const clickHandler = (e) => {
     const $targetButton = e.currentTarget;
@@ -53,4 +59,5 @@
     document.getElementsByClassName('js-button')[index].
       addEventListener('click', (e) => clickHandler(e));
   };
+  
 })();
